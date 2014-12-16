@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>ISBN注册项</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jQuery_v1_11_1.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/register.js">
+        </script>
+    </head>
+    <style type="text/css"></style>
+    <body>
+        <header></header>
+        <section>
+           <div class="container container2 clearfix">
+                <div class="listleft">
+                    <ul>
+                        <li><a href="register.html" class="selected">ISBN申请</a></li>
+                        <li><a href="list.html">ISBN查询</a></li>
+                    </ul>
+                </div>
+                <div class="listright">
+                    <dl class="long">
+                        <dt><span class="errorMsg">*</span>书名：</dt>
+                        <dd><input id='bookNameCn' type="text"><span class="errorMsg" id='book_error'></span></dd>
+                    </dl>
+                    <dl class="long">
+                        <dt>丛书名：</dt>
+                        <dd><input id='seriesName' type="text"></dd>
+                    </dl>
+                    <dl class="long">
+                        <dt><span class="errorMsg">*</span>图书类别：</dt>
+                        <dd>
+                            <select id='bookContentTypeId'>
+                               <option value="">请选择</option>
+                               <option value="5">教材</option>
+                               <option value="13">教辅</option>
+                               <option value="23">少儿读物</option>
+                               <option value="26">辞典工具书</option>
+                               <option value="29">文学</option>
+                               <option value="35">艺术</option>
+                               <option value="39">历史地理</option>
+                               <option value="40">社会科学</option>
+                               <option value="41">科学技术</option>
+                               <option value="42">政治</option>
+                               <option value="43">经济</option>
+                               <option value="44">哲学</option>
+                               <option value="45">法律</option>
+                               <option value="46">军事</option>
+                               <option value="1">其他</option>
+                            </select>
+                            <span id='bookContentType_error' class="errorMsg"></span>
+                        </dd>
+
+                    </dl>
+                    <dl class="long">
+                        <dt><span class="errorMsg">*</span>语种：</dt>
+                        <dd>
+                            <select id='langId'>
+                                <option value="">请选择</option>
+                                <option value="1">汉语</option>
+                                <option value="2">英语</option>
+                                <option value="3">法语</option>
+                                <option value="4">俄语</option>
+                                <option value="5">德语</option>
+                                <option value="6">日语</option>
+                                <option value="7">西班牙语</option>
+                                <option value="8">阿拉伯语</option>
+                                <option value="9">葡萄牙语</option>
+                                <option value="10">印地语</option>
+                                <option value="11">孟加拉语</option>
+                                <option value="-1">其他语种</option>
+                            </select> 
+                        <span id='langId_error' class="errorMsg"></span>
+                        </dd>
+                    </dl>
+                    <dl class="long">
+                        <dt><span class="errorMsg">*</span>责任编辑：</dt>
+                        <dd><input id='editing' type="text"><span id='editing_error' class="errorMsg"></span></dd>
+                    </dl>
+                    <dl class="long">
+                        <dt>预计出版时间：</dt>
+                        <dd class="pretime"><input id='prepareTime' type="text" readonly="readonly"></dd>
+                    </dl>
+                    <dl class="long">
+                        <dt>页数：</dt>
+                        <dd><input id='pages' type="text"> <span id='pages_error' class="errorMsg"></span></dd>
+                    </dl>
+                    <dl class="long">
+                        <dt><span class="errorMsg">*</span>字数：</dt>
+                        <dd><input id='wordage' type="text">千字&nbsp;<span id='wordage_error' class="errorMsg"></span></dd>
+                    </dl>
+                    <dl>
+                        <dt>印次：</dt>
+                        <dd><input id='year' type="text">年<input id='month' type="text">月 第<input id='print_count' type="text">次印刷
+                        		 &nbsp;<span id='editor_error' class="errorMsg"></span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>开本：</dt>
+                        <dd><input id='hight' type="text">mm ×<input id='width' type="text">mm（1/<input id='kaiben' type="text">）
+		                        &nbsp;<span id='kaiben_error' class="errorMsg"></span>
+		                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>暂定价:</dt>
+                        <dd><input id='priceNum' type="text">
+                            <select id='priceType'>
+                               <option value="￥">人民币</option>
+                               <option value="HK$">港币</option>
+                               <option value="$">美元</option>
+                            </select>
+                            	（共<input id='_count' type="text">本）
+                        </dd>
+                    </dl>
+                    <dl class="loginbutton">
+                        <dt>&nbsp;</dt>
+                        <dd><input type="button" id='submit' value="注&nbsp;&nbsp;册"><span class="errorMsg" id='login_error'></span></dd>
+                    </dl>
+                </div>
+           </div>
+        </section>
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.isbn.service.impl.mapper">
+	
+	<select id="loginFind"
+			parameterType="com.isbn.pojo.Publisher"
+			resultType="com.isbn.pojo.Publisher">
+		select id as id,
+			   publisher_id as accountId,
+			   userEmail as email,
+			   username as userName,
+			   userPass as password,
+			   isAuth as isAuth
+		from publisher
+		where 1=1
+			<if test="accountId != null and accountId != ''">
+				and publisher_id = #{accountId}
+			</if>
+			<if test="email != null and email != ''">
+				and userEmail = #{email}
+			</if>
+			<if test="userName != null and userName != ''">
+				and username = #{userName}
+			</if>
+			<if test="password != null and password != ''">
+				and userPass = #{password}
+			</if>
+	</select>
+	
+	<select id="queryBookList"
+			parameterType="com.isbn.util.QueryParams"
+			resultType="com.isbn.pojo.Book">
+		select id as id ,
+			   bookNameCn,
+			   seriesName,
+			   bookContentTypeId,
+			   langId,
+			   editing,
+			   format,
+			   priceType,
+			   pages,
+			   wordage,
+			   printerCount,
+			   prepareTime,
+			   REPLACE(isbn,',','-') as isbn
+		from book
+		order by prepareTime desc
+		limit #{pageSize} offset #{offset}
+	</select>
+	
+	<select id="getBookTotal"
+			resultType="int">
+		select count(1)
+		from book
+	</select>
+	
+	<insert id="addBook"
+			parameterType="com.isbn.pojo.Book"
+			useGeneratedKeys="true"
+			keyProperty="id">
+		insert into book(
+				   id,
+				   bookNameCn,
+				   seriesName,
+				   bookContentTypeId,
+				   langId,
+				   editing,
+				   format,
+				   priceType,
+				   pages,
+				   wordage,
+				   printerCount,
+				   prepareTime,
+				   isbn,
+				   publisherId
+			   )values(
+			       nextval('book_seq'),
+				   #{bookNameCn},
+				   #{seriesName},
+				   #{bookContentTypeId},
+				   #{langId},
+				   #{editing},
+				   #{format},
+				   #{priceType},
+				   #{pages},
+				   #{wordage},
+				   #{printerCount},
+				   #{prepareTime},
+				   #{isbn},
+				   #{publisherId}
+			   )
+	</insert>
+	
+	
+	<select id="queryBookDetailById"
+			parameterType="int"
+			resultType="com.isbn.pojo.Book">
+		select id as id,
+			   bookNameCn,
+			   seriesName,
+			   bookContentTypeId,
+			   langId,
+			   editing,
+			   format,
+			   priceType,
+			   pages,
+			   wordage,
+			   printerCount,
+			   prepareTime,
+			   isbn,
+			   publisherId
+		 from book
+		 where id = #{id}
+	</select>
+	
+	<update id="auth"
+			parameterType="int">
+		update publisher 
+		set isAuth = true
+		where id = #{id}		
+	</update>
+	
+	
+	<select id="queryBook"
+			parameterType="com.isbn.pojo.Book"
+			resultType="com.isbn.pojo.Book">
+		select id as id,
+			   bookNameCn,
+			   seriesName,
+			   bookContentTypeId,
+			   langId,
+			   editing,
+			   format,
+			   priceType,
+			   pages,
+			   wordage,
+			   printerCount,
+			   prepareTime,
+			   isbn,
+			   publisherId
+		 from book
+		 where isbn = #{isbn}
+		  and  publisherId=#{publisherId}
+	</select>
+	
+</mapper>

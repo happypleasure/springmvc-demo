@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>登录页</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jQuery_v1_11_1.js"></script>
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <script type="text/javascript" src="js/login.js"></script>
+    <style type="text/css"></style>
+ 	   
+    <body>
+        <header></header>
+        <section>
+           <div class="loginbox">
+              <h3>用户登录</h3>
+              <dl>
+                  <dt>账号</dt>
+                  <dd><input type="text" id="formAccountId"/>  <span id="formAccountId_error"></span></dd>
+              </dl>
+              <dl>
+                  <dt>密码</dt>
+                  <dd><input type="password" id="password"> <span id="password_error"></span></dd>
+              </dl>
+              <dl class="loginbutton">
+                  <dt>&nbsp;</dt>
+                  <dd><input type="button" value="登&nbsp;&nbsp;录" id="submit"><span id='login_error'></span></dd>
+              </dl>
+           </div>
+        </section>
+        <footer></footer>
+    </body>
+</html>

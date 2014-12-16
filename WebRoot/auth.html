@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>授权页</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jQuery_v1_11_1.js"></script>
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/auth.js"></script>
+    </head>
+    <style type="text/css"></style>
+    <body>
+        <header></header>
+        <section>
+           <div class="shoubox clearfix">
+              <div class="leftbox">
+                  <h3>账号密码登录</h3>
+                  <dl>
+                      <dt>账号</dt>
+                      <dd><input id='formAccountId' type="text"></dd>
+                      <span id="formAccountId_error"></span>
+                  </dl>
+                  <dl>
+                      <dt>密码</dt>
+                      <dd><input id='password' type="password"></dd>
+                      <span id="password_error"></span>
+                  </dl>
+                  <dl class="loginbutton">
+                      <dt>&nbsp;</dt>
+                      <dd><input type="button" id='submit' value="授&nbsp;&nbsp;权"></dd>
+                      <span id='submit_error'></span>
+                  </dl>
+              </div>
+              <div class="rightbox">
+                <p class="oneline">中国MPR注册中心将获得以下权限:</p>
+                <p><input type="checkbox" disabled="disabled" checked="checked" id="quan"><label for="quan">获取您的ISBN元数据</label></p>
+                <p>授权后表明您已同意<strong>ISBN登录服务协议</strong></p>
+              </div>
+           </div>
+        </section>
+        <footer></footer>
+    </body>
+</html>

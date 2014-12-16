@@ -1,0 +1,71 @@
+/*通用Eric Meyer's Reset:*/
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
+ margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+body {line-height: 1;-webkit-text-size-adjust:none;font-size:12px£»}
+ol, ul {list-style: none;}
+ul li{list-style-type:none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+/* remember to highlight inserts somehow! */
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse;border-spacing: 0;}
+
+input，a{outline：none;}
+a{text-decoration:none;cursor:pointer;}
+img{border:none; vertical-align:top}  /* 图片在当前行内的垂直位置 */
+input,select,textarea,button {vertical-align:middle}  /* 重置表单控件垂直居中*/
+button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
+table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
+
+//360急速Chrome内核下英文字体小于12px
+body{-webkit-text-size-adjust:none;}
+
+//input在Chrome内核下有边框，a点击后出现虚线
+input，a{outline：none;}
+
+/*清除浮动*/	
+.clearfix:before,
+.clearfix:after {
+      content:"";
+      display:table;
+   }
+.clearfix:after {
+     clear:both;
+     overflow:hidden;
+   }
+.clearfix {
+     zoom:1; /* IE < 8 */
+  }
+ .left{float:left;}
+.right{float:right;}
+
+span.errorMsg {color: red;}
+nav ul li{
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #428bca;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+nav ul li.sr-only{
+	z-index: 2;
+	color: #fff;
+	cursor: default;
+	background-color: #428bca;
+	border-color: #428bca
+}
+

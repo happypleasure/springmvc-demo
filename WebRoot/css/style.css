@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body{ background: #ececec; font-family: "Microsoft YaHei";}
+
+section{}
+
+/*登录页面*/
+.loginbox{ background: #fff; width: 500px; height: 420px; border: 1px solid #d8d8d8;-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; -moz-box-shadow: 5px 5px 10px #ccc; -webkit-box-shadow: 5px 5px 10px #ccc; box-shadow: 5px 5px 10px #ccc; position: fixed; left: 50%; top: 50%; margin-left: -250px; margin-top: -210px;}
+.loginbox h3{ width: 100%; height: 40px; line-height: 40px; text-align: center; font-size: 16px; font-family: "Microsoft YaHei"; padding: 20px 0 10px 0; color: #444;}
+.loginbox dl{ width: 400px; padding: 20px 50px 0 50px; height: 35px;}
+.loginbox dl dt,.loginbox dl dd{ float: left;}
+.loginbox dl dt{ width: 80px; line-height: 35px; font-size: 12px;}
+.loginbox dl dd{ width: 240px; height: 35px;}
+.loginbox dl dd input{ width: 218px; height: 33px; border:none; background: none; border: 1px solid #ccc; font-size: 12px;font-family: "Microsoft YaHei"; padding: 0 10px;}
+.loginbox dl.loginbutton{ padding-top: 40px;} 
+.loginbox dl.loginbutton dd input{ border: none; background: #6892f2; color: #fff;-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; width: 120px; padding: 0; cursor: pointer;} 
+
+/*授权页面*/
+.shoubox{background: #fff; width: 700px; height: 360px; border: 1px solid #d8d8d8;-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; -moz-box-shadow: 5px 5px 10px #ccc; -webkit-box-shadow: 5px 5px 10px #ccc; box-shadow: 5px 5px 10px #ccc; position: fixed; left: 50%; top: 50%; margin-left: -400px; margin-top: -210px; padding: 30px 50px;}
+.leftbox{ width: 379px; float: left; border-right: 1px solid #ccc; height: 100%;}
+.leftbox h3{ width: 100%; height: 40px; line-height: 40px; text-align: center; font-size: 16px; font-family: "Microsoft YaHei"; padding: 20px 0 10px 0; color: #444;}
+.leftbox dl{ width: 380px; height: 35px; padding: 20px 0 0 0;}
+.leftbox dl dt,.leftbox dl dd{ float: left;}
+.leftbox dl dt{ width: 80px; line-height: 35px; font-size: 12px;}
+.leftbox dl dd{ width: 240px; height: 35px;}
+.leftbox dl dd input{ width: 218px; height: 33px; border:none; background: none; border: 1px solid #ccc; font-size: 12px;font-family: "Microsoft YaHei"; padding: 0 10px;}
+.leftbox dl.loginbutton{ padding-top: 40px;} 
+.leftbox dl.loginbutton dd input{ border: none; background: #6892f2; color: #fff;-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; width: 120px; padding: 0; cursor: pointer;} 
+
+.rightbox{ width: 270px; float: left; padding-top: 50px; padding-left: 50px;}
+.rightbox p{ color: #333; font-size: 13px; line-height: 35px;}
+.oneline{ padding-bottom: 30px;}
+.rightbox p strong{ color: #6892f2; font-weight: normal;}
+
+/*ISBN注册项*/
+.container{ width: 900px; padding: 70px 0 50px 100px; margin: 0 auto; margin-top: 50px;  margin-bottom: 50px; background: #fff;border: 1px solid #d8d8d8;-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; -moz-box-shadow: 5px 5px 10px #ccc; -webkit-box-shadow: 5px 5px 10px #ccc; box-shadow: 5px 5px 10px #ccc; min-height: 500px;}
+.container dl{ width: 730px; height: 35px; padding: 20px 0 0 0;}
+.container dl dt,.container dl dd{ float: left;}
+.container dl dt{ width: 100px; line-height: 35px; font-size: 13px;}
+.container dl dd{ width: 630px; height: 35px;font-size: 12px; line-height: 35px;}
+.container dl dd input{ width: 100px; height: 33px; border:none; background: none; border: 1px solid #ccc; font-size: 12px;font-family: "Microsoft YaHei"; padding: 0 10px; margin: 0 5px 0 5px ;}
+.container dl dd select{ min-width: 140px; height: 33px; border:none; background: none; border: 1px solid #ccc; font-size: 12px;font-family: "Microsoft YaHei"; padding: 0 10px; margin: 0 5px 0 5px ;}
+.container dl.long dd input{ width: 243px;}
+.container dl.long dd select{ min-width: 263px;}
+.container dl.loginbutton{ padding-top:40px;}
+.container dl.loginbutton dd input{ border: none; background: #6892f2; color: #fff;-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; width: 120px; padding: 0; cursor: pointer;} 
+.container p{ font-size: 14px; color: red}
+
+/*列表页*/
+.container2{ padding: 50px 50px; min-height: 100px;}
+.listleft{ width: 120px; float: left; padding-right: 50px; padding-top: 40px;}
+.listleft ul li{ height: 35px; line-height: 35px; font-size: 13px; cursor: pointer;}
+.listleft ul li a{ color: #333; font-size: 14px;}
+.listleft ul li a:hover,.listleft ul li a.selected{text-decoration: underline; color: #6892f2;}
+.listright{ width: 679px;  border-left: 1px solid #ccc; float: left; min-height: 100px; padding: 20px 0 20px 50px;}
+.listright table td{ border: 1px solid #ccc; padding: 8px 10px; text-align: center;}
+.listright table thead { background: #e3e9f9;}
+.listright table thead td{font-size: 15px; padding: 14px 10px;}
+.listright table tbody td{font-size: 12px;}
+.listright table tbody tr:hover{ background: #f0f2f7;}
+.listright table tbody tr td input{ cursor: pointer;}
